@@ -1,2 +1,14 @@
-== ajax_queue ==
+= jQuery AJAX Queue =
 
+Provides a simple interface for creating AJAX requests that wait
+their turn in line. Only one request in the queue can ever be active
+at once. Once the active request finishes, the next request can start.
+
+Usage:
+
+  $.ajaxQueue.post('/some-place');
+  $.ajaxQueue.get('/another');
+  $.ajaxQueue.put('/another');
+  $.ajaxQueue.delete('/another'); // This might have trouble in Safari...
+
+(c) Copyright 2008 Pat Nakajima
