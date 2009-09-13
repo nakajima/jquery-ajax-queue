@@ -9,6 +9,6 @@ Usage:
   $.ajaxQueue.post('/some-place');
   $.ajaxQueue.get('/another');
   $.ajaxQueue.put('/another');
-  $.ajaxQueue.delete('/another'); // This might have trouble in Safari...
+  $.ajaxQueue.del('/another');
 
 (c) Copyright 2008 Pat Nakajima
