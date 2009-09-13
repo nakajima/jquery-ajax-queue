@@ -19,7 +19,7 @@ Screw.Unit(function() {
     
     describe("post()", function() {
       it("adds to queue", function() {
-        $.ajaxQueue.get('fixtures/post.html', {
+        $.ajaxQueue.post('fixtures/post.html', {
           complete: function(res) {
             expect($.ajaxQueue.gotten).to(be_true);
             expect(res.responseText).to(equal, 'Your POST request was successful!');
@@ -41,7 +41,7 @@ Screw.Unit(function() {
     
     describe("put()", function() {
       it("adds to queue", function() {
-        $.ajaxQueue.get('fixtures/put.html', {
+        $.ajaxQueue.put('fixtures/put.html', {
           complete: function(res) {
             expect($.ajaxQueue.gotten).to(be_true);
             expect(res.responseText).to(equal, 'Your PUT request was successful!');
@@ -50,9 +50,9 @@ Screw.Unit(function() {
       })
     });
     
-    describe("delete()", function() {
+    describe("del()", function() {
       it("adds to queue", function() {
-        $.ajaxQueue.get('fixtures/delete.html', {
+        $.ajaxQueue.del('fixtures/delete.html', {
           complete: function(res) {
             expect($.ajaxQueue.gotten).to(be_true);
             expect(res.responseText).to(equal, 'Your DELETE request was successful!');
