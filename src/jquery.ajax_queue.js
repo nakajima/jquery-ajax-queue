@@ -52,7 +52,7 @@
       addRequest(url, 'PUT', options);
     },
     
-    "delete": function(url, options) {
+    del: function(url, options) {
       addRequest(url, 'DELETE', options);
     }
   }
